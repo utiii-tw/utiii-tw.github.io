@@ -1,1 +1,115 @@
-https://claude.ai/artifact/CMx8yVqjKs8uDBVzdqQiUY
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI 投資長：員工財務健康儀表板</title>
+<style>
+:root{--bg:#eef2ee;--card:#fbfcfa;--ink:#3f3b3d;--mut:#858284;--a:#8b7b80;--b:#a4a5bb;--c:#d3bf84;--r:#b5655e;--line:#d8ddd6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1f1d;--card:#262a27;--ink:#e9e6e4;--mut:#a09d9e;--a:#b9a6ac;--b:#8f90b2;--c:#d3bf84;--r:#d98a82;--line:#3a3f3b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c1f1d;--card:#262a27;--ink:#e9e6e4;--mut:#a09d9e;--a:#b9a6ac;--b:#8f90b2;--c:#d3bf84;--r:#d98a82;--line:#3a3f3b;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:22px;margin:0 0 4px;font-weight:600}h2{font-size:16px;margin:0 0 10px;font-weight:600}
+.sub{color:var(--mut);margin:0 0 14px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+button,select{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+button.on{background:var(--a);border-color:var(--a);color:var(--bg)}
+button:focus-visible,select:focus-visible{outline:2px solid var(--b);outline-offset:2px}
+.g{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));margin-bottom:14px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.big{font-size:52px;line-height:1.1;font-weight:600}
+.lv{display:inline-block;margin-left:8px;padding:1px 10px;border-radius:99px;background:var(--c);color:#3f3b3d;font-size:14px}
+.row{display:grid;grid-template-columns:104px 1fr 58px;gap:8px;align-items:center;font-size:13px;margin:3px 0}
+.t{height:8px;background:var(--line);border-radius:4px;overflow:hidden}.t i{display:block;height:100%;background:var(--a)}
+.t.y i{background:var(--c)}.t.b i{background:var(--b)}
+.dim{font-weight:600;margin-top:10px;font-size:13px;color:var(--mut)}
+.n{text-align:right;color:var(--mut)}
+.al{display:flex;gap:8px;margin:7px 0;font-size:14px}.al u{flex:none;width:9px;height:9px;border-radius:50%;margin-top:8px;background:var(--b)}
+.al.r u{background:var(--r)}.al.y u{background:var(--c)}
+.st{display:flex;height:26px;border-radius:6px;overflow:hidden;font-size:12px;color:#fff}
+.st span{display:flex;align-items:center;justify-content:center}
+.tri{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;text-align:center;font-size:13px}
+.tri b{display:block;font-size:20px}
+.hm{display:grid;grid-template-columns:repeat(3,16px);gap:2px;justify-content:center;margin:4px 0}.hm i{height:16px;background:var(--a)}
+.fl{display:flex;overflow-x:auto;gap:0}
+.fl div{flex:1 0 118px;padding:10px 12px 10px 18px;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%,8% 50%);background:var(--b);color:#fff;font-size:12.5px;margin-right:-8px}
+.fl div:nth-child(2){background:#9a98ae}.fl div:nth-child(3){background:#948d9b}.fl div:nth-child(4){background:#8e8490}.fl div:nth-child(5){background:#8b7b80}.fl div:nth-child(6){background:var(--c);color:#3f3b3d}
+.fl b{display:block;font-size:13.5px}
+small{color:var(--mut)}ul{padding-left:18px;margin:6px 0}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:4px 2px;text-align:left;border-bottom:1px solid var(--line)}
+.sc{overflow-x:auto}
+</style></head><body><div class="w">
+<h1>AI 投資長：員工財務健康儀表板</h1>
+<p class="sub">依任務一評分制與任務二三類員工自動計算；數字皆為模擬，非投資建議。</p>
+<div class="bar" id="tabs"></div>
+<div id="out"></div>
+</div>
+<script>
+const f=x=>Math.round(x).toLocaleString('en-US');
+const E={
+a:{n:'28 歲新進員工',inc:60000,exp:40000,ess:34000,liq:50000,ins:2,debt:10000,late:1,inv:1500,nw:60000,lr:0,unx:60000,w:[60,20,20],base:0,
+g:[{n:'學貸清償',t:480000,T:48,p:12,c:120000,m:10000,r:36},{n:'預備金 6 個月',t:204000,T:48,p:12,c:50000,m:3000,r:36,q:1}],
+adv:['薪資入帳日自動轉 NT$4,278 到預備金（現行只存 3,000），預備金達標前，新增資金不加碼股票。','近 12 個月逾期 1 次已扣 1.7 分：所有帳單改自動扣款。','勞退自提從 0% 起步 3%，每年加 1 個百分點；補上定期壽險，保額先涵蓋學貸餘額。']},
+b:{n:'40 歲中年員工',inc:120000,exp:90000,ess:70000,liq:150000,ins:3,debt:35000,late:0,inv:6000,nw:72000,lr:.03,unx:150000,w:[50,30,20],base:0,
+g:[{n:'長照備用金',t:1500000,T:72,p:12,c:300000,m:12000,r:60},{n:'壽險保額',t:8400000,T:24,p:12,c:4000000,m:0,r:12,L:2000000}],
+adv:['專款 300,000 不能算預備金，可用流動資產只有 150,000（2.1 個月）：先補到 3 個月，約 210,000。','長照專戶每月由 12,000 提到 20,000；若做不到，與家人討論延長期程或下調目標。','壽險仍缺 NT$2,400,000，加保前先確認保費不超過年收入 10%（約 84,000）。長照專戶只放定存與短債。']},
+c:{n:'58 歲準退休員工',inc:80000,exp:55000,ess:45000,liq:240000,ins:3,debt:0,late:0,inv:8000,nw:240000,lr:.06,unx:120000,w:[45,40,15],base:5600000,
+g:[{n:'退休資金',t:6900000,T:96,p:48,c:5600000,m:18000,r:48,mk:1},{n:'低波動資產',t:900000,T:60,p:12,c:150000,m:10000,r:48}],
+adv:['低波動資產的真實缺口是 750,000，不是稿中的 50,000：每年把約 187,500 從成長資產移到短債與現金，或每月多存 5,625。','退休資金每月需存 27,083，現行 18,000：補上 9,083，或延後退休、降低退休後生活費。','退休後採動態提領：前三年年底市值平均 × 4.5%。5,600,000 × 4.5% = 252,000，低於每年需求 300,000；資產要約 6,670,000 才夠。']}
+};
+const lin=(x,z,fu,W)=>W*Math.max(0,Math.min(1,(x-z)/(fu-z)));
+let k='a',s=0;
+function calc(e){
+ const inc=e.inc*(s==2?.8:1),liq=Math.max(0,e.liq-(s==3?3*e.ess:0)),G=e.g.map(g=>{
+  let c=g.c;if(g.mk&&s==1)c*=1-.2*e.w[0]/100;if(g.q&&s==3)c=Math.max(0,c-3*e.ess);
+  const est=c+g.m*(g.r-(s==3?3:0))+(g.L||0);
+  return{...g,c,est,pr:Math.min(1,c/g.t/(g.p/g.T)),er:Math.min(1,est/g.t)}});
+ const av=a=>a.reduce((x,y)=>x+y,0)/a.length;
+ const sav=(inc-e.exp)/inc,ux=e.unx/(inc*12),mo=liq/e.ess,dti=e.debt/inc,ir=e.inv/inc,nr=e.nw/(inc*12),pr=av(G.map(g=>g.pr)),er=av(G.map(g=>g.er));
+ const I=[['收支管理','儲蓄率',14,lin(sav,0,.2,14),(sav*100).toFixed(1)+'%'],['收支管理','非預期支出占比',6,lin(ux,.2,.05,6),(ux*100).toFixed(1)+'%'],
+ ['財務安全','預備金月數',10,lin(mo,0,6,10),mo.toFixed(1)+' 個月'],['財務安全','保險保障',15,lin(e.ins,0,3,15),e.ins+'/3 類'],
+ ['負債管理','債務還款占收入比',15,lin(dti,.5,.2,15),(dti*100).toFixed(1)+'%'],['負債管理','逾期繳款',5,lin(e.late,3,0,5),e.late+' 次'],
+ ['投資與資產','投資率',5,lin(ir,0,.1,5),(ir*100).toFixed(1)+'%'],['投資與資產','淨資產年增加比',5,lin(nr,0,.1,5),(nr*100).toFixed(1)+'%'],['投資與資產','退休專戶提繳率',5,lin(e.lr,0,.06,5),(e.lr*100)+'%'],
+ ['目標達成度','目標進度達成率',10,pr*10,(pr*100).toFixed(1)+'%'],['目標達成度','目標預估達成率',10,lin(er,.5,1,10),(er*100).toFixed(1)+'%']];
+ return{I,G,tot:I.reduce((x,y)=>x+y[3],0),mo,dti,sav,liq}}
+function risk(w,rho){const se=.16/Math.sqrt(12),sb=.05/Math.sqrt(12),x=w[0]/100,y=w[1]/100;return 1.645*Math.sqrt(x*x*se*se+y*y*sb*sb+2*rho*x*y*se*sb)*100}
+const heat=o=>`<div class="hm">${[0,1,2].map(i=>[0,1,2].map(j=>`<i style="opacity:${i==j?1:o}"></i>`).join('')).join('')}</div>`;
+function render(){
+ const e=E[k],r=calc(e),t=r.tot,lv=t>=85?['優良','維持現有做法，轉向資產配置與稅務規劃優化']:t>=70?['穩健','找出得分率最低的部分，設定改善目標']:t>=50?['需注意','安排理財諮詢，優先補足預備金與保障、降低債務壓力']:['高風險','轉介債務協商與緊急資金資源'];
+ let dims={};r.I.forEach(i=>{(dims[i[0]]=dims[i[0]]||[]).push(i)});
+ const sc=Object.entries(dims).map(([d,a])=>`<div class="dim">${d}　${a.reduce((x,y)=>x+y[3],0).toFixed(1)}/${a.reduce((x,y)=>x+y[2],0)}</div>`+a.map(i=>{const p=i[3]/i[2];return`<div class="row"><span>${i[1]}</span><div class="t ${p<.4?'y':''}"><i style="width:${p*100}%"></i></div><span class="n">${i[4]}</span></div>`}).join('')).join('');
+ const gl=r.G.map(g=>`<div style="margin:10px 0"><b>${g.n}</b> <small>目標 NT$${f(g.t)}</small>
+ <div class="row"><span>進度</span><div class="t b"><i style="width:${g.pr*100}%"></i></div><span class="n">${(g.pr*100).toFixed(0)}%</span></div>
+ <div class="row"><span>預估到期</span><div class="t ${g.er<.8?'y':''}"><i style="width:${g.er*100}%"></i></div><span class="n">${(g.er*100).toFixed(0)}%</span></div>
+ <small>預估缺口 NT$${f(Math.max(0,g.t-g.est))}</small></div>`).join('');
+ const al=[];
+ if(r.mo<3)al.push(['r',`預備金只有 ${r.mo.toFixed(1)} 個月，低於 3 個月警戒線：暫停新增投資，先補預備金。`]);
+ if(r.dti>.36)al.push(['r','債務負擔超過 36% 警戒線，建議啟動債務協商。']);
+ if(e.late>0)al.push(['y',`近 12 個月逾期 ${e.late} 次：改自動扣款。`]);
+ if(e.ins<3)al.push(['y','保障缺 '+(3-e.ins)+' 類（壽險）。']);
+ if(r.sav<.1)al.push(['y','儲蓄率低於 10%，檢視固定支出。']);
+ r.G.forEach(g=>{const gap=g.t-g.est;if(gap>0)al.push([g.er<.8?'y':'b',g.L?`${g.n}尚缺 NT$${f(gap)}，需規劃加保。`:`${g.n}預估缺口 NT$${f(gap)}：每月再多投入 NT$${f(gap/(g.r-(s==3?3:0)))}。`])});
+ if(s==1)al.unshift(['r',`股市 −20%：組合約 −${(.2*e.w[0]).toFixed(0)}%。${e.base?`退休資產約減少 NT$${f(e.base*.2*e.w[0]/100)}；依動態提領規則，提領額只小幅調整。`:'長期目標不因單次下跌而改變，仍照原計畫投入。'}`]);
+ if(s==2)al.unshift(['y','收入下降 20%：先保必要支出與保險，再依新收入重排各目標的月投入。']);
+ if(s==3)al.unshift(['r','失業 3 個月：動用預備金、暫停定期投資、確認保險不中斷。']);
+ al.push(['b',`配置偏離目標 ±5 個百分點才提出再平衡（股票目標 ${e.w[0]}%）。`]);
+ const ST=[['2008',-40,5],['2020',-30,2],['2022',-18,-13]];
+ out.innerHTML=`<div class="g">
+ <div class="c"><h2>財務健康指數</h2><div><span class="big">${t.toFixed(1)}</span><span class="lv">${lv[0]}</span></div><p class="sub">${lv[1]}</p>${s?'<small>已套用情境，分數為模擬值。</small>':''}</div>
+ <div class="c"><h2>目標進度與預估</h2>${gl}</div>
+ <div class="c"><h2>主動提醒</h2>${al.map(a=>`<div class="al ${a[0]}"><u></u><span>${a[1]}</span></div>`).join('')}</div></div>
+ <div class="g"><div class="c"><h2>十一項指標（滿分 100）</h2>${sc}</div>
+ <div class="c"><h2>個人化建議</h2><ul>${e.adv.map(a=>`<li>${a}</li>`).join('')}</ul></div></div>
+ <div class="c" style="margin-bottom:14px"><h2>投資配置與風險監控：${e.n}</h2>
+ <div class="st"><span style="width:${e.w[0]}%;background:var(--a)">股票 ${e.w[0]}%</span><span style="width:${e.w[1]}%;background:var(--b)">債券 ${e.w[1]}%</span><span style="width:${e.w[2]}%;background:var(--c);color:#3f3b3d">現金 ${e.w[2]}%</span></div>
+ <p class="sub" style="margin-top:6px">長期投資部位配置；預備金與專款另計，不放進風險資產。</p>
+ <div class="g" style="margin:0"><div class="tri"><div>平時 VaR 95%<b>${risk(e.w,.1).toFixed(1)}%</b><small>單月損失不超過此值</small></div><div>危機 VaR 95%<b>${risk(e.w,.6).toFixed(1)}%</b><small>相關性升高</small></div><div>相關性<b>${heat(.15)}</b>${heat(.65)}<small>平時 / 危機</small></div></div>
+ <div class="sc"><table><tr><th>壓力測試（示意）</th><th>組合損益</th></tr>${ST.map(x=>`<tr><td>${x[0]} 情境</td><td>${(x[1]*e.w[0]/100+x[2]*e.w[1]/100).toFixed(1)}%${e.base?`（NT$${f(e.base*(x[1]*e.w[0]/100+x[2]*e.w[1]/100)/100)}）`:''}</td></tr>`).join('')}</table>
+ <small>假設：股票年化波動 16%、債券 5%，股債相關係數平時 0.1、危機 0.6；股 −40/−30/−18%，債 +5/+2/−13%。</small></div></div></div>
+ <div class="c"><h2>追蹤機制：制定規則＋長期陪跑</h2><div class="fl"><div><b>投資需求確認</b>入職與每年</div><div><b>個人政策書</b>寫下門檻與規則</div><div><b>策略配置</b>目標比重</div><div><b>標的建議</b>逐檔篩選淘汰</div><div><b>再平衡追蹤</b>超過門檻才提出</div><div><b>監控與報告</b>每日市場、每月更新、每季歸因</div></div>
+ <ul><li>市場觸發：股市自高點回撤 10%／20%、單月損失逼近 VaR、股債相關性上升。</li><li>個人觸發：預備金低於 3 個月、收入或支出變動 10% 以上、逾期、保障缺口、預估達成率低於 80%。</li><li>每次觸發都先提醒，員工確認後才調整計畫。</li></ul></div>`;
+ tabs.innerHTML=Object.entries(E).map(([i,v])=>`<button class="${i==k?'on':''}" onclick="k='${i}';render()">${v.n}</button>`).join('')+`<select aria-label="情境" onchange="s=+this.value;render()">${['目前現況','股市下跌 20%','收入下降 20%','失業 3 個月'].map((x,i)=>`<option value="${i}" ${i==s?'selected':''}>${x}</option>`).join('')}</select>`;
+}
+render();
+</script></body></html>
